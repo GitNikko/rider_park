@@ -1,0 +1,19 @@
+
+<div class="contatiner-fluid">
+  <div id="map">
+    <script type="text/javascript">
+    handler = Gmaps.build('Google');
+    handler.buildMap({
+      provider: {
+      zoom: 15,
+      center: new google.maps.LatLng(-33.8688, 151.2093)
+      },
+      internal: {id: 'map'}},
+      function(){
+        markers = handler.addMarkers();
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    });
+    </script>
+  </div>
+</div>
